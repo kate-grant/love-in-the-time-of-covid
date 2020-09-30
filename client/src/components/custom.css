@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Blocus";
+    src: url("../blocuswebfont.woff") format("woff");
+  }
+
+.myLinks {
+    font-family: "Blocus";
+    text-decoration: none;
+    color: black;
+}
+
+.myLinks:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.myList {
+    display: flex;
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+    align-items: flex-start;
+}
+
+.myTitle {
+    padding-left: 20px;
+    padding-right: 10vw;
+    font-size: 84px;
+    float: left;
+}
+
+.subNav {
+    padding-right: 50px;
+    font-size: 52px;
+    float: right;
+}

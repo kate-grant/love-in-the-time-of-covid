@@ -104,6 +104,23 @@ getAdviceById = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
+getAdviceByTag = async (req, res) => {
+    await Advice.findOne({ _tag: req.params.tag }, (err, advice) => {
+        if (err) {
+            console.log(err)
+            return res.status(400).json({ success: false, error: err })
+        }
+
+        if (!advice) {
+            console.log(err)
+            return res
+                .status(404)
+                .json({ success: false, error: `Advice not found` })
+        }
+        return res.status(200).json({ success: true, data: advice })
+    }).catch(err => console.log(err))
+}
+
 getAdvice = async (req, res) => {
     await Advice.find({}, (err, advices) => {
         if (err) {
@@ -125,5 +142,6 @@ module.exports = {
     updateAdvice,
     deleteAdvice,
     getAdviceById,
+    getAdviceByTag,
     getAdvice,
 }

@@ -22,7 +22,7 @@ const Nav = () => (
 class NavBar extends Component {
     render() {
         return (
-            <div style={{display: "flex"}, {width: "100vh"}, {height: "40px"}}>
+            <div style={{display: "flex"}, {position: "sticky"}, {width: "100vh"}, {height: "100px"}}>
                 <Nav />
             </div>
         )

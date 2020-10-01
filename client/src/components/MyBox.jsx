@@ -1,20 +1,22 @@
 import React, { Component } from 'react'
 
 import apis from '../api'
+import '../components/custom.css'
 
 
 
 const StyledBox = ({idea, location, tag}) => (
-    <div style={{display: "flex"}, {border: "5px solid black"}}>
-        <p>{idea}</p>
-        <span>{location}</span>
-        <span>{tag}</span>
+    <div className={`sBox ${tag}`} style={{display: "flex"}}>
+        <p className="adviceContent">{idea}</p>
+        <span className="locationContent">{location}</span>
+        <span className="tagContent">{tag}</span>
     </div>
     );
 
 class MyBox extends Component {
     constructor(props) {
         super(props);
+        
         this.state= {
             myAdvice: [],
             isLoading: false,
@@ -26,15 +28,9 @@ class MyBox extends Component {
 
         console.log('will get');
 
-        await apis.getAllAdvice({
-            
-            auth: {
-                username: 'main',
-                password: 'artiemain'
-            }
-        }).then(myAdvice => {
+        await apis.getAllAdvice().then(myAdvice => {
             this.setState({
-                myAdvice: myAdvice.data,
+                myAdvice: myAdvice.data.data,
                 isLoading: false,
             })
         })
@@ -42,6 +38,7 @@ class MyBox extends Component {
     }
 
     render () {
+        const {myAdvice} = this.state
         return (
         <div>
             {this.state.myAdvice.map((advice, index) => (

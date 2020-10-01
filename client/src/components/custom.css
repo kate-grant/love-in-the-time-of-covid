@@ -1,7 +1,14 @@
 @font-face {
     font-family: "Blocus";
     src: url("../blocuswebfont.woff") format("woff");
-  }
+}
+
+@font-face {
+    font-family: "Sporting Grotesque";
+    src: url("../Sporting_Grotesque-Regular_web.woff2") format("woff2");
+}
+
+  
 
 .myLinks {
     font-family: "Blocus";
@@ -19,7 +26,7 @@
     list-style-type: none;
     padding: 0; 
     margin: 0; 
-    align-items: flex-start;
+    align-items: center;
 }
 
 .myTitle {
@@ -31,6 +38,51 @@
 
 .subNav {
     padding-right: 50px;
-    font-size: 52px;
+    font-size: 60px;
+    float: right;
+}
+
+.adviceSection {
+    position: relative;
+    padding-left: 100px;
+}
+
+.sBox {
+    
+    height: 300px;
+    width: 500px;
+    border: 5px solid black;
+    font-family: "Sporting Grotesque";
+    
+}
+
+.sBox.food:hover{
+    border: 10px solid lightgreen;
+    color: lightgreen;
+}
+
+.sBox.games:hover{
+    border: 10px solid violet;
+    color: violet;
+}
+
+.adviceContent {
+    margin: 10px;
+
+}
+
+.locationContent {
+    margin: 10px;
+    padding-top: 200px;
+    position: absolute;
+    float: left;
+
+}
+
+.tagContent {
+    margin: 10px;
+    padding-top: 200px;
+    padding-left: 300px;
+    position: absolute;
     float: right;
 }

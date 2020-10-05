@@ -5,7 +5,7 @@ const AdviceCtrl = require('../controllers/advice-ctrl.js')
 
 const router = express.Router()
 
-
+console.log("6");
 
 router.post('/advice', AdviceCtrl.createAdvice)
 router.put('/advice/:id', AdviceCtrl.updateAdvice)

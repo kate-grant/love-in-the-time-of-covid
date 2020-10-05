@@ -1,7 +1,9 @@
 const Advice = require('../models/advice-model.js')
 
 createAdvice = (req, res) => {
+    console.log("1");
     const body = req.body
+
 
     if (!body) {
         return res.status(400).json({
@@ -9,16 +11,19 @@ createAdvice = (req, res) => {
             error: 'You must provide a date idea',
         })
     }
-
+    console.log("2");
     const advice = new Advice(body)
 
     if (!advice) {
+        console.log("not advice! " + JSON.stringify(advice))
         return res.status(400).json({ success: false, error: err })
     }
-
+    console.log("3");
+    console.log(JSON.stringify(req.body));
     advice
         .save()
         .then(() => {
+            console.log("5");
             return res.status(201).json({
                 success: true,
                 id: advice._id,
@@ -26,6 +31,7 @@ createAdvice = (req, res) => {
             })
         })
         .catch(error => {
+            console.log("4");
             return res.status(400).json({
                 error,
                 message: 'Advice not created!',

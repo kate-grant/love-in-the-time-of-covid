@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from "react-router-dom";
 import "./custom.css";
 
 
@@ -9,15 +9,21 @@ class Links extends Component {
         return (
             <React.Fragment>
                 <div className='navbar'>
-                    <Link to="/" className="navbar-brand">
+                    <Link to="/" className={`navbar-brand  ${
+                  props.location.pathname === "/" ? "active" : ""
+                }`}>
                         Love in the Time of Covid
                     </Link>
                     
-                    <Link to="/about" className="nav-link">
+                    <Link to="/about" className={`nav-link  ${
+                  props.location.pathname === "/about" ? "active" : ""
+                }`}>
                                     About
                     </Link>
                     
-                    <Link to="/advice/submit" className="nav-link">
+                    <Link to="/submissionform" className={`nav-item  ${
+                  props.location.pathname === "/submissionform" ? "active" : ""
+                }`}>
                                     Submit
                     </Link>
                 </div>

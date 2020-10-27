@@ -12,7 +12,7 @@ const apiPort = 3000
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }))
-app.use(bodyParser.json({ type: 'application/json' }))
+app.use(bodyParser.json())
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 

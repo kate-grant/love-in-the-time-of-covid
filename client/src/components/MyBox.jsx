@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import InfiniteScroll from "react-infinite-scroll-component";
 import apis from '../api'
 import '../components/custom.css'
 
@@ -20,6 +20,9 @@ class MyBox extends Component {
         this.state= {
             myAdvice: [],
             isLoading: false,
+            begin: 0,
+            end: 5,
+            items:[]
         }
     }
 
@@ -32,19 +35,54 @@ class MyBox extends Component {
             this.setState({
                 myAdvice: myAdvice.data.data,
                 isLoading: false,
+                items: myAdvice.data.data.slice(this.begin, this.end),
+                begin: this.begin + 5,
+                end: this.state.end + 5
             })
         })
         console.log('did get?');
+        //console.log(JSON.stringify(items))
     }
 
+    
+
+    fetchMoreData = () => {
+        // a fake async api call like which sends
+        // 20 more records in 1.5 secs
+        setTimeout(() => {
+          this.setState({
+            items: this.state.items.concat(this.state.myAdvice.slice(this.begin, this.end)),
+            begin: this.begin + 5,
+            end: this.state.end + 5
+          });
+        }, 1500);
+        
+      };
+
+    
+
     render () {
-        const {myAdvice} = this.state
+        //const {myAdvice} = this.state
+        //{console.log(this.state.items.length);}
         return (
-        <div>
-            {this.state.myAdvice.map((advice, index) => (
-                <StyledBox {...advice} />
-            ))}
-        </div>)
+        
+                <InfiniteScroll
+                    dataLength={this.state.items.length}
+                    next={this.fetchMoreData}
+                    hasMore={true}
+                    loader={<h4>Loading...</h4>}
+                    >
+                    {this.state.items.map((advice, index) => (
+                        <StyledBox {...advice} />
+                    ))}
+                </InfiniteScroll>
+                
+            )
+
+        
+
+
+       
     }
 }
 

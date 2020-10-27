@@ -6,17 +6,23 @@
 @font-face {
     font-family: "Sporting Grotesque";
     src: url("../Sporting_Grotesque-Regular_web.woff2") format("woff2");
-}
+} 
 
-  
+.adviceSection{
+    cursor: url("../cursor.png");
+  }
 
-.myLinks {
+
+.navLink {
     font-family: "Blocus";
+    font-size: 10vh;
+    padding-left: 5vw;
+    padding-right: 40px;
     text-decoration: none;
     color: black;
 }
 
-.myLinks:hover {
+.navLink:hover {
     text-decoration: none;
     color: red;
 }
@@ -29,22 +35,11 @@
     align-items: center;
 }
 
-.myTitle {
-    padding-left: 20px;
-    padding-right: 10vw;
-    font-size: 84px;
-    float: left;
-}
-
-.subNav {
-    padding-right: 50px;
-    font-size: 60px;
-    float: right;
-}
-
 .adviceSection {
     position: relative;
     padding-left: 100px;
+    
+    
 }
 
 .sBox {
@@ -53,6 +48,8 @@
     width: 500px;
     border: 5px solid black;
     font-family: "Sporting Grotesque";
+    border-radius: 25px;
+    margin: 40px;
     
 }
 
@@ -85,4 +82,64 @@
     padding-left: 300px;
     position: absolute;
     float: right;
+}
+
+.about {
+    padding: 100px;
+    
+}
+
+.h2 {
+    font-family: Blocus;
+    text-decoration: none;
+    color: black;
+    padding: 400px;
+    margin: 400px;
+}
+
+.submissionform {
+    display: inline-block;
+    padding-left: 25vw;
+    width: 75%;
+}
+
+.adviceText {
+    padding: 12px;
+    margin: 10px 20px 10px 20px;
+    height: 200px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.adviceText:focus {
+    outline: none;
+    border: 2px solid red;
+}
+
+.input {
+    padding: 12px;
+    margin: 10px 20px 10px 20px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid red;
+}
+
+.submitButton {
+    background-color: white;
+    padding: 10px 24px;
+    margin: 10px 20px 10px 20px;
+    border: 2px solid black;
+    border-radius: 4px;
+
+}
+
+.submitButton:hover {
+    outline: none;
+    border: 2px solid red;
 }

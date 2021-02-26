@@ -8,9 +8,24 @@
     src: url("../Sporting_Grotesque-Regular_web.woff2") format("woff2");
 } 
 
-.adviceSection{
+* {
     cursor: url("../cursor.png");
+
   }
+
+.mainBody{
+    background-color: red;
+} 
+
+.about{
+    background-color: red;
+    height: 100vh;
+} 
+
+.submissionform{
+    background-color: red;
+    height: 100vh;
+} 
 
 
 .navLink {
@@ -24,8 +39,9 @@
 
 .navLink:hover {
     text-decoration: none;
-    color: red;
+    color: white;
 }
+
 
 .myList {
     display: flex;
@@ -53,14 +69,24 @@
     
 }
 
-.sBox.food:hover{
-    border: 10px solid lightgreen;
+.sBox:hover{
+    border: 10px solid white;
+    color: white;
+}
+
+.sBox.nature:hover{
+    border: 10px solid white;
     color: lightgreen;
 }
 
 .sBox.games:hover{
-    border: 10px solid violet;
-    color: violet;
+    border: 10px solid white;
+    color:violet;
+}
+
+.sBox.food:hover{
+    border: 10px solid orange;
+    color: white;
 }
 
 .adviceContent {
@@ -114,7 +140,7 @@
 
 .adviceText:focus {
     outline: none;
-    border: 2px solid red;
+    border: 2px solid black;
 }
 
 .input {
@@ -127,11 +153,11 @@
 
 .input:focus {
     outline: none;
-    border: 2px solid red;
+    border: 2px solid white;
 }
 
 .submitButton {
-    background-color: white;
+    background-color: red;
     padding: 10px 24px;
     margin: 10px 20px 10px 20px;
     border: 2px solid black;
@@ -141,5 +167,6 @@
 
 .submitButton:hover {
     outline: none;
-    border: 2px solid red;
+    border: 2px solid white;
+    color: white;
 }

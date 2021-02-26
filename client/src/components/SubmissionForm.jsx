@@ -4,42 +4,54 @@ import '../components/custom.css'
 
 class SubmissionForm extends React.Component {
 
-    constructor(props){
-        super(props)
+    constructor(){
+        super();
         this.state = {
             idea: "your digital/distanced romance here",
             location: "your location",
             tag: "tag"
-        }
+        };
+        console.log("contructed");
     }
 
-    handleChange(e){
-        this.setState({idea: e.target.value}, {location: e.target.value}, {tag: e.target.value})   
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value }); 
+        console.log("handled");  
     }
-  
-    postContent(){
-        window.self = this 
-        axios.post("http://localhost:3000/api/advice", {
-            idea: this.state.idea,
-            location: this.state.location,
-            tag: this.state.tag
+
+
+    postContent = (e) => {
+        e.preventDefault();
+        const { idea, location, tag } = this.state;
+        console.log("will post");
         
-    }).then(function (response) {
-        window.self.deleteText()
-    })
+        axios.post("http://localhost:3000/api/advice", { idea, location, tag });
+
+        this.deleteText();
+        console.log("deleted");  
+      }
+   
+    deleteText(){
+        this.state = {
+            idea: "your digital/distanced romance here",
+            location: "your location",
+            tag: "tag"
+        };
+        console.log("deleted");
     }
 
-    deleteText(){
-        this.setState({idea: ""}, {location: ""}, {tag: ""})
-    }
+
 
     render(){
+        const { idea, location, tag }  = this.state;
         return(
        <div className="submissionform">
-            <textarea className="adviceText" value={this.state.idea} onChange={this.handleChange.bind(this)}></textarea> 
-            <input className="input" type="text" value={this.state.location} onChange={this.handleChange.bind(this)}></input> 
-            <input className="input" type="text" value={this.state.tag} onChange={this.handleChange.bind(this)}></input> 
-            <button className ="submitButton" onClick={this.postContent.bind(this)}> Submit </button>
+            
+                <textarea className="adviceText" name="idea" value={idea} onChange={this.handleChange}></textarea> 
+                <input className="input" type="text" name="location" value={location} onChange={this.handleChange}></input> 
+                <input className="input" type="text" name="tag" value={tag} onChange={this.handleChange}></input> 
+                <button className ="submitButton" type="submit" onClick={this.postContent}> Submit </button>
+            
        </div>
     )
   }

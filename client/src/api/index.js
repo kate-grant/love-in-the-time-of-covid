@@ -12,14 +12,14 @@ const api = axios.create({
 
 })
 
-export const insertAdvice = payload => api.post(`/advice`, payload)
+export const createAdvice = payload => api.post(`/advice`, payload)
 export const getAllAdvice = () => api.get(`/allAdvice`)
 export const updateAdviceById = (id, payload) => api.put(`/advice/${id}`, payload)
 export const deleteAdviceById = id => api.delete(`/advice/${id}`)
 export const getAdviceById = id => api.get(`/advice/${id}`)
 export const getAdviceByTag = tag => api.get(`/advice/${tag}`)
 const apis = {
-    insertAdvice,
+    createAdvice,
     getAllAdvice,
     updateAdviceById,
     deleteAdviceById,

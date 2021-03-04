@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
-import SubmissionForm from '../components/SubmissionForm'
+import SubmissionForm from "../components/SubmissionForm.jsx";
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../components/custom.css'

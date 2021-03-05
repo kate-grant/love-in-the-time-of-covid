@@ -1,6 +1,6 @@
 import React from "react"
 import axios from "axios"
-import {Link} from "react-router-dom"
+import {Redirect} from "react-router-dom"
 import '../components/custom.css'
 
 class SubmissionForm extends React.Component {
@@ -27,7 +27,14 @@ class SubmissionForm extends React.Component {
         const { idea, location, tag } = this.state;
         console.log("will post");
         
-        axios.post("http://localhost:3000/api/advice", { idea, location, tag });
+        axios.post("http://localhost:3000/api/advice", { idea, location, tag }).then(function (response) {
+            if(response){ 
+                window.location = '/';
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 
         this.deleteText();
         console.log("deleted");  
@@ -54,9 +61,8 @@ class SubmissionForm extends React.Component {
                 <textarea className="adviceText" name="idea" value={idea} onChange={this.handleChange}></textarea> 
                 <input className="input" type="text" name="location" value={location} onChange={this.handleChange}></input> 
                 <input className="input" type="text" name="tag" value={tag} onChange={this.handleChange}></input> 
-                <Link to="/">
-                    <button className ="submitButton" type="submit" onClick={this.postContent}> Submit </button>
-                </Link>
+                <button className ="submitButton" type="submit" onClick={this.postContent}> Submit </button>
+                
                 
        </div>
     )

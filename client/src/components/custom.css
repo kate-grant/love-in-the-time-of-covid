@@ -7,6 +7,7 @@
     font-family: "Sporting Grotesque";
     src: url("../Sporting_Grotesque-Regular_web.woff2") format("woff2");
 } 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
     cursor: url("../cursor.png");
@@ -41,7 +42,8 @@
 
 .navLink:hover {
     text-decoration: none;
-    color: white;
+    color: black;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 }
 
 
@@ -65,13 +67,20 @@
     height: auto;
     width: auto;
     border: 2px solid black;
-    font-family: "Sporting Grotesque";
+    font-family: "Roboto";
     border-radius: 25px;
     margin: 40px;
     display: flex;
     flex-direction: column;
     color:black;
+    text-transform: uppercase;
     
+}
+.sBox:hover {
+    border: 1px solid black;
+    color:black;
+    font-style: italic;
+    box-shadow: 0 0 25px black, 0 0 25px black inset;
 }
 
 
@@ -85,10 +94,11 @@
 }
 
 .eyeCandy{
-   
+    padding-top: 60px;
     top: 0;
     left: 0px;
     float: left;
+    position: sticky;
 }
 
 .corner {
@@ -97,12 +107,12 @@
     animation: mover 2s infinite  alternate;
 }
 @-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-7px); }
+    0% { transform: translateY(0); transform: translateX(0); opacity: 100%;}
+    100% { transform: translateY(7px); transform: translateX(-3px); opacity: 80%;}
 }
 @keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-7px); }
+    0% { transform: translateY(0); transform: translateX(0); opacity: 100%;}
+    100% { transform: translateY(7px); transform: translateX(-3px); opacity: 80%;}
 }
 
 .locationContent {
@@ -117,6 +127,8 @@
     right: 0;
     bottom: 0;
     text-transform: uppercase;
+    font-weight: bold;
+    font-style: oblique;
 }
 
 .about {

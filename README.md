@@ -1,5 +1,10 @@
 # love-in-the-time-of-covid
 
+1. ### Overview
+2. ### Back-end Functionality
+3. ### Front-end Functionality
+4. ### Design
+
 ## Overview
 ### Love in the Time of Covid is a resource for sharing and collecting date ideas for the digital and distanced romantics of the quarantine era.
 

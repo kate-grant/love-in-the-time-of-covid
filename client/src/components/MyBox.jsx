@@ -33,7 +33,7 @@ class MyBox extends Component {
 
         await apis.getAllAdvice().then(myAdvice => {
             this.setState({
-                myAdvice: myAdvice.data.data,
+                myAdvice: myAdvice.data.data.sort().reverse() ,
                 isLoading: false,
                 items: myAdvice.data.data.slice(this.begin, this.end),
                 begin: this.begin + 5,

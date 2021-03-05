@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-    cursor: url(https://i.pinimg.com/originals/21/15/6d/21156dbfcb2509cfaecae348f305ac5e.png);
+    cursor: crosshair;
 
   }
 
@@ -109,17 +109,19 @@
 }
 
 .eyeCandy{
-    padding-top: 20px;
+    padding-top: 5px;
     top: 0;
     left: 0px;
     float: left;
     position: sticky;
+    
 }
 
 .corner {
     left: -30px;
     -webkit-animation: mover 2s infinite  alternate;
     animation: mover 2s infinite  alternate;
+    z-index: 3;
 }
 @-webkit-keyframes mover {
     0% { transform: translateY(0); transform: translateX(0); opacity: 100%;}
@@ -129,6 +131,37 @@
     0% { transform: translateY(0); transform: translateX(0); opacity: 100%;}
     100% { transform: translateY(7px); transform: translateX(-3px); opacity: 80%;}
 }
+
+.sonnet{
+    font-family: Blocus;
+    font-size: 40px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 120px;
+    height: 80vh;
+    text-align: right;
+    
+    animation: upScrollText 120s infinite linear;
+}
+@keyframes upScrollText {
+    to {
+      transform: translateY(-600%);
+    }
+    0%{opacity: 50%;}
+    10%{opacity:0%;}
+    20%{opacity: 100%;}
+    30%{opacity:0%;}
+    40%{opacity: 100%;}
+    50%{opacity:0%;}
+    60%{opacity: 100%;}
+    70%{opacity:0%;}
+    80%{opacity: 100%;}
+    90%{opacity:0%;}
+  }
 
 .locationContent {
     margin: 10px;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from "react-router-dom";
 import {menu} from './menu.js'
-import './custom.css'
+import '../components/custom.css'
  
  const NavItem = ({className, href, children}) => (
     <li className={`${className}`}>
@@ -23,7 +23,7 @@ const Nav = () => (
 class NavBar extends Component {
     render() {
         return (
-            <div style={{display: "flex"}, {position: "sticky"}, {width: "100vh"}, {height: "100px"}}>
+            <div className="navbox" style={{display: "flex"}, {position: "sticky"}, {width: "100vh"}, {height: "100px"}}>
                 <Nav />
             </div>
         )

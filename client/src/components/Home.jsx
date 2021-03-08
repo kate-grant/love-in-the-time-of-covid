@@ -21,40 +21,43 @@ function Home() {
                     <div className="line1">
                         <p>Shall I compare thee to pre-covid’s day?</p>
                     </div>
-                    <div className="line1">
+                    <div className="line2">
                         <p>Thou art more lovely and more temperate: </p>
                     </div>
-                    <div className="line1">
+                    <div className="line3">
                         <p>Rough winds do shake the paper mask in May,</p>
                     </div>
-                    <div className="line1">
+                    <div className="line4">
                         <p>And summer’s lease hath all too short a date:</p>
                     </div>
-                    <div className="line1">
+                    <div className="line5">
                         <p>Sometime too hot the eye of heaven shines,</p>
                     </div>
-                    <div className="line1">
+                    <div className="line6">
                         <p>And often is his hiding fevers grim;</p>
                     </div>
-                    <div className="line1">
+                    <div className="line7">
                         <p>And every fair from fair sometime declines,</p>
                     </div>
-                    <div className="line1">
+                    <div className="line8">
                         <p>By chance, or fear of leaving hair untrimmed:</p>
+                    </div> 
+                    <div className="line9">
+                        <p>But thy eternal summer shall not fade,</p>
                     </div>
-                    <div className="line1">
+                    <div className="line10">
                         <p>Nor lose possession of that fair thou ow’st,</p>
                     </div>
-                    <div className="line1">
+                    <div className="line11">
                         <p>Nor shall death brag thou hast from Fauci strayed</p>
                     </div>
-                    <div className="line1">
+                    <div className="line12">
                         <p>When in eternal vaccine wait doth grow’st:</p>
                     </div>
-                    <div className="line1">
+                    <div className="line13">
                         <p>So long as men can breathe or eyes can see,</p>
                     </div>
-                    <div className="line1">
+                    <div className="line14">
                         <p>So long lives this, and this gives life to thee.</p>
                     </div>
                     

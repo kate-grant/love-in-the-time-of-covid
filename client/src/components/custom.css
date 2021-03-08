@@ -18,6 +18,12 @@
     background-color: red;
 } 
 
+.home{
+    position: absolute;
+    z-index: -1;
+    background-color: red;
+}
+
 .about{
     background-color: red;
     height: 100vh;
@@ -28,7 +34,11 @@
     height: 100vh;
 } 
 
-
+.navbox{
+    position: absolute;
+    background: red;
+    z-index:5;
+}
 
 .navLink {
     font-family: "Blocus";
@@ -111,6 +121,7 @@
 .eyeCandy{
     padding-top: 5px;
     top: 0;
+    bottom: 100vh;
     left: 0px;
     float: left;
     position: sticky;
@@ -118,18 +129,19 @@
 }
 
 .corner {
-    left: -30px;
+    left: 15px;
     -webkit-animation: mover 2s infinite  alternate;
-    animation: mover 2s infinite  alternate;
+    animation: mover 3s infinite  alternate;
     z-index: 3;
+    position: absolute;
 }
 @-webkit-keyframes mover {
-    0% { transform: translateY(0); transform: translateX(0); opacity: 100%;}
-    100% { transform: translateY(7px); transform: translateX(-3px); opacity: 80%;}
+    0% { transform: scale(1); opacity: 100%;}
+    100% { transform: scale(0.95); opacity: 80%;}
 }
 @keyframes mover {
-    0% { transform: translateY(0); transform: translateX(0); opacity: 100%;}
-    100% { transform: translateY(7px); transform: translateX(-3px); opacity: 80%;}
+    0% { transform: scale(1); opacity: 100%;}
+    100% { transform: scale(0.95); opacity: 80%;}
 }
 
 .sonnet{
@@ -139,29 +151,29 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    z-index: 1;
     top: 30px;
     left: 120px;
-    height: 80vh;
+    width: 25vw;
+    height: 20vh;
     text-align: right;
-    
-    animation: upScrollText 120s infinite linear;
+    animation: upScrollText 30s infinite linear;
+    color: fuchsia;
+    text-shadow: 0 0 25px black, 0 0 3px black
 }
 @keyframes upScrollText {
     to {
       transform: translateY(-600%);
     }
-    0%{opacity: 50%;}
-    10%{opacity:0%;}
-    20%{opacity: 100%;}
-    30%{opacity:0%;}
-    40%{opacity: 100%;}
-    50%{opacity:0%;}
-    60%{opacity: 100%;}
-    70%{opacity:0%;}
-    80%{opacity: 100%;}
-    90%{opacity:0%;}
+    0%{color: fuschia;}
+    10%{text-shadow: 0 0 25px black, 0 0 3px black; color: white;}
+    20%{}
+    30%{text-shadow: 0 0 25px black, 0 0 3px black; color: fuschia;}
+    40%{text-shadow: none; color: fuschia;}
+    50%{text-shadow: 0 0 25px black, 0 0 3px black; color: fuschia;} 
+    
   }
+
+
 
 .locationContent {
     margin: 10px;
@@ -238,4 +250,13 @@
     outline: none;
     border: 2px solid white;
     color: white;
+}
+
+.aboutSub {
+    width: 50vw;
+}
+
+.abSpan{
+    font-family: Blocus;
+    font-size: 55px;
 }

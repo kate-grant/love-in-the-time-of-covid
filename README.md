@@ -8,7 +8,7 @@
 ## Overview
 ### Love in the Time of Covid is a resource for sharing and collecting date ideas for the digital and distanced romantics of the quarantine era.
 
-![Homepage Screenshot](/LITTOChome.png)
+![Homepage Screenshot](/final-home.png)
 
 ## Back-end Functionality
 ### This project uses a MERN stack to implement an internal, Restful API. The API handles the date advice data submitted and displayed on the web application, using React components to model, control, and route.

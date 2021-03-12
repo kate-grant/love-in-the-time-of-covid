@@ -22,4 +22,7 @@ app.get('/', (req, res) => {
 
 app.use('/api', adviceRouter)
 
+const path = require('path');
+app.get('*', (req, res)=>{  res.sendFile(path.join(__dirname, '../build/index.html'));})
+
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
